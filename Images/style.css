@@ -1,0 +1,8 @@
+.form-container.active {
+  opacity: 1;
+  scale: 1;
+}
+
+.current-tab {
+  background-color: aqua;
+}

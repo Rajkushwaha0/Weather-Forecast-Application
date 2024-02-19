@@ -1,0 +1,261 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+:root {
+  --colorDark1: #112d4e;
+  --colorDark2: #3f72af;
+  --colorLight1: #dbe2ef;
+  --colorLight2: #f9f7f7;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+  color: var(--colorLight2);
+}
+.active {
+  opacity: 1;
+  scale: 1;
+  z-index: 112;
+}
+
+.mainheading {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tab-container {
+  width: 35%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tab {
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 0.975rem;
+}
+.current-tab {
+  background-color: rgba(219, 226, 239, 0.5);
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-weight: 300;
+}
+
+.main_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 4rem;
+}
+
+.btn {
+  all: unset;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  background-color: var(--colorDark2);
+  cursor: pointer;
+  padding: 10px 30px;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grant-location-container {
+  display: none;
+}
+
+.grant-location-container.active {
+  display: flex;
+}
+.grant-location-container img {
+  margin-bottom: 2rem;
+}
+
+/* :nth-child( ) */
+.grant-location-container p:first-of-type {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.grant-location-container p:last-of-type {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.75px;
+}
+
+/* loading container  */
+.loading-container {
+  display: none;
+}
+.loading-container.active {
+  display: flex;
+}
+.loading-container p {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* error display  */
+.error-display {
+  display: none;
+}
+.error-display.active {
+  display: flex;
+}
+
+.error-display img {
+  width: 300px;
+  height: 300px;
+}
+
+/* form container  */
+.form-container {
+  display: none;
+  width: 70%;
+  width: 550px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+  margin-bottom: 3rem;
+}
+.form-container.active {
+  display: flex;
+}
+
+.form-container input {
+  all: unset;
+  width: calc(100% - 80px);
+  height: 40px;
+  border-radius: 10px;
+  padding: 0 20px;
+  background-color: rgba(219, 226, 239, 0.5);
+}
+.form-container input::placeholder {
+  color: var(--colorLight2);
+}
+.form-container .search-btn {
+  all: unset;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* user information  */
+.subcontainer3 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.userInfoContainer {
+  display: none;
+}
+
+.userInfoContainer.active {
+  display: flex;
+}
+.userInfoContainer .up {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.temp img {
+  width: 150px;
+  height: 150px;
+}
+.temp p {
+  font-size: 95px;
+}
+.temp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.name img {
+  width: 25px;
+  height: 20px;
+}
+.name p {
+  font-size: 25px;
+}
+.date p {
+  font-size: 20px;
+}
+.time p {
+  font-size: 20px;
+}
+.right p:nth-child(2) {
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.userInfoContainer .down {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.down img {
+  width: 100px;
+  height: 100px;
+}
+.grid-box {
+  width: calc(100% / 3);
+  background-color: rgba(219, 226, 239, 0.5);
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.down p {
+  font-size: 22px;
+  font-weight: 300;
+}
